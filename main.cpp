@@ -69,25 +69,23 @@ void runTests() {
     tabela.print();
 
     std::cout << "\nTeste 2: Tratamento de Colisões\n";
-    tabela.insertItem(Produto(1, "Caneta Vermelha", 1.75)); // Mesmo código que Caneta Azul
+    tabela.insertItem(Produto(1, "Caneta Vermelha", 1.75)); 
     std::cout << "Após inserir Caneta Vermelha (mesmo código que Caneta Azul):\n";
     tabela.print();
 
     std::cout << "\nTeste 3: Remoção de Itens\n";
-    tabela.deleteItem(1); // Remove Canetas Azul e Vermelha
+    tabela.deleteItem(1); 
     std::cout << "Após remover produtos com código 1 (Canetas):\n";
     tabela.print();
 
     std::cout << "\nTeste 4: Busca de Itens\n";
-    bool found = tabela.findItem(2);  // Deve retornar verdadeiro para Lápis Grafite
+    bool found = tabela.findItem(2);  
     std::cout << "Busca por Produto com código 2 (deve ser encontrado): " << (found ? "Sucesso" : "Falha") << "\n";
-    found = tabela.findItem(1);  // Deve retornar falso agora
+    found = tabela.findItem(1); 
     std::cout << "Busca por Produto com código 1 após remoção (não deve ser encontrado): " << (found ? "Falha" : "Sucesso") << "\n";
 
-    // Teste 5 é mais conceitual, já que não implementamos capacidade dinâmica ou redimensionamento real
     std::cout << "\nTeste 5: Testando a capacidade\n";
-    // Aqui você pode inserir mais itens se desejar testar até MAX_ITEMS
-    // Por enquanto, apenas re-imprimimos o estado atual para simplicidade
+
     std::cout << "Tabela após tentar exceder a capacidade:\n";
     tabela.print();
 }
